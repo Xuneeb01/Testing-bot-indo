@@ -1,6 +1,7 @@
-
-let balance = parseInt(localStorage.getItem('balance')) || 0;
-
+ let userId = localStorage.getItem('userId') || "guest";
+            let userBalanceKey = `balance_${userId}`;
+            let balance = parseInt(localStorage.getItem(userBalanceKey)) || 0;
+            
 function completeTask(reward, taskUrl) {
    
     if (localStorage.getItem(taskUrl) === 'true') {
